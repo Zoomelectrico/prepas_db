@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    // preload
+    link(rel="preload", href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", as="style")
+    link(rel="preload", href="https://code.jquery.com/jquery-3.3.1.slim.min.js", as="script")
+    link(rel="preload", href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js", as="script")
+    link(rel="preload", href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js", as="script")
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Prepa 2
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", defer, async)
+
+  body
+    block navbar
+      // Navbar
+      nav.navbar.navbar-light.bg-light
+        span.navbar-text Prepa 17/01/2019
+    block content
+      // Content
+    block scripts
+      script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", defer)
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js", defer)
+      script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js", defer)
