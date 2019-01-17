@@ -36,7 +36,7 @@ controller.deleteProduct = async function (id, callback) {
 
 controller.createProduct = async function (data, callback) {
     try {
-        console.log(data);
+        console.log(data.nombre, data.precio);
         // code goes here
         callback(null);
     } catch (error) {
