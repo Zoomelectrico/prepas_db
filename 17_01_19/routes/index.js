@@ -29,6 +29,21 @@ router.post("/delete/:id", (req, res) => {
   }
 });
 
+router.post("/create", (req, res) => {
+  console.log('Hello from the server!');
+  if (!!req.body) {
+    productController.createProduct(req.body, (err) => {
+      if (err)
+        res.json({
+          success: false,
+          msg: 'Failed to delete product'
+        });
+      else
+        res.redirect('/');
+    });
+  }
+});
+
 router.get("/:id");
 
 module.exports = router;

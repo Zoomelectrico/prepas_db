@@ -1,7 +1,7 @@
 extends base
 block content
   .container.pt-4
-    h2 Prepa CRUD
+    h2 Operaciones CRUD
     .row.mt-5
       .col-12
         table.table.bg-white
@@ -24,3 +24,12 @@ block content
               td
                 form(action=`delete/${products[i].id}`,method="POST")
                   button.btn.btn-outline-danger(type='submit') Eliminar
+        h4.mt-5 Crear Productos
+        form(action='create',method="POST")
+          .form-group
+            label(for='nombre') Nombre
+            input#nombre.form-control(type='text' aria-describedby='nombre' placeholder='Nombre')
+          .form-group
+            label(for='precio') Precio
+            input#precio.form-control(type='text' placeholder='Precio')
+          button.btn.btn-primary(type='submit') Crear

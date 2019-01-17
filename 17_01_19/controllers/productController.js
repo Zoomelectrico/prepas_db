@@ -34,4 +34,14 @@ controller.deleteProduct = async function (id, callback) {
     }
 }
 
+controller.createProduct = async function (data, callback) {
+    try {
+        console.log(data);
+        // code goes here
+        callback(null);
+    } catch (error) {
+        callback(error);
+    }
+}
+
 module.exports = controller;
