@@ -15,9 +15,24 @@ router.get("/", (req, res) => {
 });
 
 router.post("/delete/:id", (req, res) => {
-  console.log('Hello from the server!');
   if (!!req.params.id) {
     productController.deleteProduct(req.params.id, (err) => {
+      if (err)
+        res.json({
+          success: false,
+          msg: 'Failed to delete product'
+        });
+      else
+        res.redirect('/');
+    });
+  }
+});
+
+router.post("/create", (req, res) => {
+  console.log('Hello from routes!');
+  console.log(req.body);
+  if (!!req.body) {
+    productController.createProduct(req.body, (err) => {
       if (err)
         res.json({
           success: false,
