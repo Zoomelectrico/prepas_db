@@ -20,6 +20,15 @@ const Product = db.define('Product', {
             isNumeric: true,
             notEmpty: true
         }
+    },
+    Activo: {
+        type: sequelize.TINYINT,
+        allowNull: false,
+        defaultValue: 1,
+
+        validate: {
+            notEmpty: true
+        }
     }
 
 }, {

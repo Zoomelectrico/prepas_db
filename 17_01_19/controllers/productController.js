@@ -6,7 +6,11 @@ const controller = {};
 
 controller.getProducts = async function (callback) {
     try {
-        let response = await Product.findAll();
+        let response = await Product.findAll({
+            where: {
+                Activo: 1
+            }
+        });
         let products = response.map(result => result.dataValues);
         console.log(products);
         callback(products, null);
@@ -15,9 +19,15 @@ controller.getProducts = async function (callback) {
     }
 }
 
-controller.deleteProduct = async function (callback) {
+controller.deleteProduct = async function (id, callback) {
     try {
-        // code goes here
+        let response = await Product.update({
+            Activo: false
+        }, {
+            where: {
+                id
+            }
+        });
         callback(null);
     } catch (error) {
         callback(error);

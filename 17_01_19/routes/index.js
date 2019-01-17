@@ -9,23 +9,22 @@ router.get("/", (req, res) => {
         success: false,
         msg: 'Failed to show products'
       });
-    else {
+    else
       res.render("index", {products});
-    }
   });
 });
 
 router.post("/delete/:id", (req, res) => {
-  if (!!req.body) {
-    productController.deleteProduct((err) => {
+  console.log('Hello from the server!');
+  if (!!req.params.id) {
+    productController.deleteProduct(req.params.id, (err) => {
       if (err)
         res.json({
           success: false,
           msg: 'Failed to delete product'
         });
-      else {
+      else
         res.redirect('/');
-      }
     });
   }
 });
