@@ -7,24 +7,34 @@ router.get("/", (req, res) => {
     if (err)
       res.json({
         success: false,
-        msg: 'Failed to show products'
+        msg: "Failed to show products"
       });
-    else
-      res.render("index", {products});
+    else res.render("index", { products });
   });
 });
 
 router.post("/delete/:id", (req, res) => {
-  console.log('Hello from the server!');
+  console.log("Hello from the server!");
   if (!!req.params.id) {
-    productController.deleteProduct(req.params.id, (err) => {
-      if (err)
+    productController.deleteProduct(req.params.id, err => {
+      if (!!err)
         res.json({
           success: false,
-          msg: 'Failed to delete product'
+          msg: "Failed to delete product"
         });
-      else
-        res.redirect('/');
+      else res.redirect("/");
+    });
+  }
+});
+
+router.post("/create", (req, res) => {
+  console.log("Hello from routes!");
+  console.log(req.body);
+  if (!!req.body) {
+    productController.createProduct(req.body, err => {
+      if (err) {
+        throw err;
+      } else res.redirect("/");
     });
   }
 });
