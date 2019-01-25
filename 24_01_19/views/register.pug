@@ -1,0 +1,21 @@
+extends layout
+block content
+      .row.d-flex.justify-content-center
+            .col-4.mt-4
+                  h2.my-4 #{title}
+                  form(action='register' method="POST")
+                        .form-group
+                              label(for='name') User
+                              input#name.form-control(type='text' placeholder='Enter user' name="name")
+                        .form-group
+                              label(for='email') Email
+                              input#email.form-control(type='text' placeholder='Enter email' name="email")
+                        .form-group
+                              label(for='password') Password
+                              input#password.form-control(type='password' placeholder='Password' name="password")
+                        .form-group
+                              label(for='password2') Confirm Password
+                              input#password2.form-control(type='password' placeholder='Confirm Password' name="password2")
+                        .form-group.d-flex.justify-content-center
+                              button.btn.btn-success.mt-3.btn-block(type='submit') Register
+
