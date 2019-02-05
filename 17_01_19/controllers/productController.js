@@ -37,6 +37,7 @@ controller.deleteProduct = async function(id, callback) {
   }
 };
 
+<<<<<<< HEAD
 controller.createProduct = async function(data, callback) {
   try {
     console.log(data.nombre, data.precio);
@@ -53,3 +54,16 @@ controller.createProduct = async function(data, callback) {
 };
 
 module.exports = controller;
+=======
+controller.createProduct = async function (data, callback) {
+    try {
+        console.log(data.nombre, data.precio);
+        // code goes here
+        callback(null);
+    } catch (error) {
+        callback(error);
+    }
+}
+
+module.exports = controller;
+>>>>>>> 0673d86a63dffafb6a75bb49be1319a67d976b49
