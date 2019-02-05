@@ -1,0 +1,25 @@
+extends layout
+block content
+  .container.py-4
+    .row
+      .col.text-center.justify-content-center
+        h2 Create
+    .row.justify-content-center
+      .col-md-8.col-lg-6
+        form(action=`/update/${estudiante.carnet}`, method="POST")
+          .form-group
+            label(for="nombre") Nombre
+            input.form-control#nombre(type="text", name="nombre", placeholder="Nombre", required, value=`${estudiante.nombre}`)
+          .form-group
+            label(for="apellido") Apellido
+            input.form-control#apellido(type="text", name="apellido", placeholder="Apellido", required, value=`${estudiante.apellido}`)
+          .form-group
+            label(for="email") Correo Electronico
+            input.form-control#email(type="email", name="email", placeholder="Correo Electronico", required, value=`${estudiante.email}`)
+          .form-group
+            label(for="carnet") Carnet
+            input.form-control#carnet(type="text", name="carnet", placeholder="Carnet", required, value=`${estudiante.carnet}`)
+          button.btn.btn-primary(type="submit") Guardar
+          if currentPath === '/delete'
+            form(action=`/delete/${estudiante.carnet}`, method="POST")
+              button.btn.btn-danger(type="submit") Eliminar

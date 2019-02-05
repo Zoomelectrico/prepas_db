@@ -1,0 +1,22 @@
+extends layout
+block content
+  .container.py-4
+    .table-responsive
+    if estudiantes
+      table.table.table-hover
+        thead
+          tr
+            th(scope="col") Nombre
+            th(scope="col") Apellido
+            th(scope="col") Carnet
+            th(scope="col") Email
+            th(scope="col") Regular?
+        tbody
+        each estudiante in estudiantes
+          tr
+            td #{estudiante.nombre}
+            td #{estudiante.apellido}
+            td
+              a(href=`${currentPath}/${estudiante.carnet}`) #{estudiante.carnet}
+            td #{estudiante.email}
+            td!=`${estudiante.regular ? '✔️' : '❌'}`
