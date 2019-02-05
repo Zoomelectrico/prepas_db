@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,500);
+* {
+  font-family: "Quicksand", sans-serif; }
+
+.bg-blue {
+  background: #1e4770; }
+
+.btn {
+  background: #28a745 !important;
+  -webkit-transition: all 100ms ease-in 0s;
+  -o-transition: all 100ms ease-in 0s;
+  transition: all 100ms ease-in 0s;
+  z-index: 1; }
+  .btn:hover {
+    -webkit-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+            transform: scale(1.08); }
+
+
+/*# sourceMappingURL=main.css.map*/

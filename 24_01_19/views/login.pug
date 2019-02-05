@@ -1,0 +1,17 @@
+extends layout
+block content
+      .row.d-flex.justify-content-center
+            .col-4.mt-4
+                  h2.my-4 #{destinos[i]}
+                  form(action='login' method="POST")
+                        .form-group
+                              label(for='name') User
+                              input#name.form-control(type='text' placeholder='Enter user' name="name")
+                        .form-group
+                              label(for='password') Password
+                              input#password.form-control(type='password' placeholder='Password' name="password")
+                        .form-group.d-flex.justify-content-center
+                              button.btn.btn-success.mt-3.btn-block(type='submit') Submit
+
+      
+

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500");
+
+$font: "Quicksand", sans-serif;
+$primary: #783f8e;
+$secondary: #75dddd;
+$black: #292929;
+$white: #fafafa;
+$grey: #5f5f5f;
+$blue: #1e4770;
+
+* {
+  font-family: $font;
+}
+
+.bg-blue {
+  background: $blue;
+}
+
+.btn {
+  background: #28a745 !important;
+  transition: all 100ms ease-in 0s;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
