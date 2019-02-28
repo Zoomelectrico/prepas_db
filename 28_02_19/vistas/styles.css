@@ -1,0 +1,24 @@
+.bg-primary {
+    background-color: #266db5 !important;
+}
+
+.text-primary {
+    color: #266db5 !important;
+}
+
+.btn-primary {
+    background-color: #266db5 !important;
+    border-color: #266db5 !important;
+}
+
+.card {
+    min-width: 21rem !important;
+}
+
+.btn {
+    transition: all 0.4s cubic-bezier(0, 2, 0, 0) 0;
+}
+
+.btn:hover {
+    transform: scale(1.05) !important;
+}
